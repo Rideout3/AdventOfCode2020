@@ -1,4 +1,5 @@
 from itertools import combinations
+import math
 
 def loadNumbers(path):
     f = open(path)
@@ -16,10 +17,10 @@ numbers = loadNumbers('Day1_ReportRepair/Input')
 validPairs = findSumCombinations(numbers, 2, targetValue)
 if validPairs:
     pair = validPairs[0]
-    print('Found Pair: %i,%i\nPair Product: %i' % (pair[0], pair[1], pair[0] * pair[1]))
+    print('Found Pair: %i,%i\nPair Product: %i' % (pair[0], pair[1], math.prod(pair)))
 
 #PART 2
 validTriplets = findSumCombinations(numbers, 3, targetValue)
 if validTriplets:
     trip = validTriplets[0]
-    print('Found Triplet: %i,%i,%i\nTriplet Product: %i' % (trip[0], trip[1], trip[2], trip[0] * trip[1] * trip[2]))
+    print('Found Triplet: %i,%i,%i\nTriplet Product: %i' % (trip[0], trip[1], trip[2], math.prod(trip)))
