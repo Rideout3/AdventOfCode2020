@@ -15,7 +15,6 @@ def traverseCollisions(geometry, x, y):
         trees.append(geometry[i][j])
     return trees
 
-
 geometry = loadGeometry('Day3_TobogganTrajectory/input')
 
 #Part 1
